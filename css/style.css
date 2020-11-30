@@ -1,0 +1,636 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
+*, body {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside, section {
+  display: block; }
+
+html, body {
+  height: 100%;
+  min-width: 320px; }
+
+body {
+  line-height: 1;
+  font-size: 14px;
+  font-family: "Yanone Kaffeesatz";
+  -ms-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: "Yanone Kaffeesatz"; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit; }
+
+header {
+  height: 140px;
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  background-color: #fff; }
+  header .header__left ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0; }
+    header .header__left ul li {
+      margin-left: 10px; }
+  header .header__logo img {
+    width: 165px;
+    height: 20px; }
+  header .header__logo img:hover {
+    opacity: .5; }
+  header .header__menu .menu-btn {
+    height: 30px;
+    width: 30px;
+    border-radius: 35%;
+    border: 0px;
+    position: relative;
+    background-color: #fff; }
+  header .header__menu .menu-btn span,
+  header .header__menu .menu-btn span::before,
+  header .header__menu .menu-btn span::after {
+    position: absolute;
+    top: 50%;
+    margin-top: -1%;
+    width: 30px;
+    height: 2px;
+    background: #000;
+    left: 50%;
+    margin-left: -15px; }
+  header .header__menu .menu-btn span::before,
+  header .header__menu .menu-btn span::after {
+    content: '';
+    display: block;
+    -webkit-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s; }
+  header .header__menu .menu-btn span::before {
+    -webkit-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px); }
+  header .header__menu .menu-btn span::after {
+    -webkit-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px); }
+  header .header__menu .menu-btn_active span::before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: red; }
+  header .header__menu .menu-btn_active span::after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    background-color: red; }
+  header .header__menu .menu-btn_active span {
+    height: 0; }
+
+footer {
+  height: 140px;
+  width: 100%;
+  position: fixed;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  bottom: 0;
+  background-color: #000; }
+  footer .footer__left ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0; }
+    footer .footer__left ul li {
+      margin-left: 10px; }
+      footer .footer__left ul li a img {
+        -webkit-filter: invert(1);
+        filter: invert(1); }
+  footer .footer__logo img {
+    width: 165px;
+    height: 20px;
+    -webkit-filter: invert(1);
+    filter: invert(1); }
+  footer .footer__menu .menu-btn {
+    height: 30px;
+    width: 30px;
+    border-radius: 35%;
+    border: 0px;
+    position: relative;
+    background: #000; }
+  footer .footer__menu .menu-btn span,
+  footer .footer__menu .menu-btn span::before,
+  footer .footer__menu .menu-btn span::after {
+    position: absolute;
+    top: 50%;
+    margin-top: -1%;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    left: 50%;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    margin-left: -15px; }
+  footer .footer__menu .menu-btn span::before,
+  footer .footer__menu .menu-btn span::after {
+    content: '';
+    display: block;
+    -webkit-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s; }
+  footer .footer__menu .menu-btn span::before {
+    -webkit-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px); }
+  footer .footer__menu .menu-btn span::after {
+    -webkit-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px); }
+  footer .footer__menu .menu-btn_active span::before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: red; }
+  footer .footer__menu .menu-btn_active span::after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    background-color: red; }
+  footer .footer__menu .menu-btn_active span {
+    height: 0; }
+
+#main {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  width: 100%;
+  background-color: #f1eaea; }
+  #main .main__items {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    height: 620px;
+    width: 100%; }
+    #main .main__items .main__row {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      font-size: 0;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      height: 300px; }
+      #main .main__items .main__row .item {
+        width: 285px;
+        height: 285px; }
+        #main .main__items .main__row .item img {
+          border: 5px solid #020;
+          width: 265px;
+          height: 265px; }
+        #main .main__items .main__row .item img:hover {
+          opacity: 0.5; }
+  #main #section {
+    margin: 0 auto;
+    width: 1165px;
+    height: 400px;
+    border: 1px solid #d6d6d6;
+    background-color: #ffffff; }
+    #main #section .section__text .headline {
+      margin-top: 80px;
+      color: #000000;
+      font-family: "Yanone Kaffeesatz";
+      font-size: 28px;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 30px;
+      text-align: center;
+      /* Text style for "A,  Pictur" */
+      font-style: normal;
+      letter-spacing: 0.7px;
+      line-height: normal; }
+    #main #section .section__text .text {
+      margin-top: 30px;
+      color: #000000;
+      font-family: "Arial Narrow";
+      font-size: 18px;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 30px;
+      text-align: center;
+      /* Text style for "People pet" */
+      font-style: normal;
+      letter-spacing: 0.9px;
+      line-height: normal; }
+    #main #section .btn-section {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      font-size: 0;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin-top: 50px; }
+      #main #section .btn-section .btn {
+        width: 193px;
+        height: 45px;
+        background-color: #202020;
+        color: #ffffff;
+        font-family: "Yanone Kaffeesatz";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1.35px; }
+  #main #posts {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    #main #posts .post__area {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      font-size: 0;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      #main #posts .post__area .posts__first {
+        /* Style for "Rectangle" */
+        width: 865px;
+        height: 456px;
+        border: 1px solid #d6d6d6;
+        background-color: #ffffff;
+        margin: 40px; }
+        #main #posts .post__area .posts__first .first__textblock p {
+          width: 335px;
+          height: 10px;
+          color: #989b9f;
+          font-family: "Arial MT";
+          font-size: 14px;
+          font-weight: 400;
+          font-style: normal;
+          letter-spacing: normal;
+          line-height: 30px;
+          text-align: left;
+          /* Text style for "A,  Pictur" */
+          font-style: normal;
+          letter-spacing: 0.14px;
+          line-height: normal;
+          margin: 15px 30px; }
+        #main #posts .post__area .posts__first .first__textblock h2 {
+          width: 340px;
+          height: 22px;
+          color: #000000;
+          font-family: "Yanone Kaffeesatz";
+          font-size: 28px;
+          font-weight: 400;
+          font-style: normal;
+          letter-spacing: normal;
+          line-height: 30px;
+          text-align: left;
+          /* Text style for "A,  Pictur" */
+          font-style: normal;
+          letter-spacing: 0.7px;
+          line-height: normal;
+          margin: 15px 30px; }
+        #main #posts .post__area .posts__first .first__mainblock {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          font-size: 0; }
+          #main #posts .post__area .posts__first .first__mainblock .column__first p {
+            width: 160px;
+            height: 11px;
+            color: #6c6e72;
+            font-family: "Arial MT";
+            font-size: 16px;
+            font-weight: 400;
+            text-align: left;
+            margin-left: 30px; }
+          #main #posts .post__area .posts__first .first__mainblock .column__first img {
+            width: 233px;
+            height: 227px;
+            margin: 30px; }
+          #main #posts .post__area .posts__first .first__mainblock .column__second {
+            width: 388px;
+            height: 256px;
+            text-align: justify;
+            margin: 30px; }
+            #main #posts .post__area .posts__first .first__mainblock .column__second .posts__main-text {
+              color: #000000;
+              font-family: "Arial Narrow";
+              font-size: 17px;
+              font-style: normal;
+              letter-spacing: 0.85px;
+              line-height: normal; }
+            #main #posts .post__area .posts__first .first__mainblock .column__second .posts__main-textunder {
+              margin-top: 10px;
+              color: #3d3b3b;
+              font-family: Arial;
+              font-style: normal;
+              letter-spacing: 0.14px;
+              font-size: 14px;
+              line-height: normal; }
+          #main #posts .post__area .posts__first .first__mainblock .column__third {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            font-size: 0;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column; }
+            #main #posts .post__area .posts__first .first__mainblock .column__third p {
+              height: 30px;
+              color: #000000;
+              font-family: "Yanone Kaffeesatz";
+              font-size: 20px;
+              font-weight: 400;
+              font-style: normal;
+              letter-spacing: normal;
+              line-height: 24px;
+              text-align: center; }
+            #main #posts .post__area .posts__first .first__mainblock .column__third_sub {
+              display: -webkit-box;
+              display: -moz-box;
+              display: -ms-flexbox;
+              display: -webkit-flex;
+              display: flex;
+              font-size: 0;
+              margin-top: 40px;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+              flex-direction: column;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              align-items: center; }
+              #main #posts .post__area .posts__first .first__mainblock .column__third_sub img {
+                height: 20px;
+                width: 20px;
+                margin: 5px; }
+    #main #posts .post__sidebar {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      font-size: 0;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      #main #posts .post__sidebar_first {
+        margin: 40px;
+        width: 265px;
+        height: 428px;
+        border: 1px solid #d6d6d6;
+        background-color: #ffffff; }
+        #main #posts .post__sidebar_first .categories__headline {
+          color: #000000;
+          font-family: "Yanone Kaffeesatz";
+          font-size: 25px;
+          line-height: 24px;
+          text-align: center;
+          margin-top: 45px; }
+        #main #posts .post__sidebar_first .menu {
+          margin-left: 40px; }
+          #main #posts .post__sidebar_first .menu .menu__list {
+            position: relative; }
+            #main #posts .post__sidebar_first .menu .menu__list .menu__drop {
+              position: absolute;
+              left: 100%;
+              opacity: 0;
+              top: -9999em; }
+          #main #posts .post__sidebar_first .menu .menu__list:hover .menu__drop {
+            opacity: 1;
+            top: 0;
+            margin-left: 30px; }
+        #main #posts .post__sidebar_first ul {
+          width: 85px;
+          height: 14px;
+          color: #000000;
+          font-family: "Arial MT";
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: normal;
+          line-height: 24px;
+          text-align: left; }
+          #main #posts .post__sidebar_first ul li a {
+            text-decoration: none;
+            color: black;
+            -webkit-transition: 0.5s all;
+            -o-transition: 0.5s all;
+            transition: 0.5s all; }
+          #main #posts .post__sidebar_first ul li a:hover {
+            background: #666;
+            padding: 10px 20px;
+            color: #fff; }
+  #main .pre__footer {
+    width: 100%;
+    height: 400px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    #main .pre__footer .wrap .card {
+      position: relative;
+      width: 400px;
+      height: 300px;
+      border: 1px solid black;
+      border-radius: 15px;
+      -webkit-box-shadow: 1px 5px darkblue;
+      box-shadow: 1px 5px darkblue;
+      -webkit-perspective: 1000px;
+      perspective: 1000px; }
+    #main .pre__footer .wrap .card:hover .front {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg); }
+    #main .pre__footer .wrap .card:hover .back {
+      -webkit-transform: rotateY(360deg);
+      transform: rotateY(360deg); }
+    #main .pre__footer .wrap .front, #main .pre__footer .wrap .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      font-size: 0;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-transition: 2s;
+      -o-transition: 2s;
+      transition: 2s;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden; }
+      #main .pre__footer .wrap .front span, #main .pre__footer .wrap .back span {
+        color: black;
+        font-size: 40px;
+        text-align: center;
+        text-transform: lowercase; }
+    #main .pre__footer .wrap .front {
+      background-color: #fff;
+      border-radius: 15px; }
+    #main .pre__footer .wrap .back {
+      background-color: green;
+      border-radius: 15px;
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg); }
+    #main .pre__footer .wrap1 {
+      background-color: #3ba979;
+      border-radius: 15px; }
+      #main .pre__footer .wrap1 .card {
+        position: relative;
+        width: 400px;
+        height: 300px;
+        border: 1px solid black;
+        border-radius: 15px;
+        -webkit-box-shadow: 1px 5px darkblue;
+        box-shadow: 1px 5px darkblue;
+        -webkit-perspective: 1000px;
+        perspective: 1000px; }
+      #main .pre__footer .wrap1 .card:hover .front {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg); }
+      #main .pre__footer .wrap1 .card:hover .back {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg); }
+      #main .pre__footer .wrap1 .front, #main .pre__footer .wrap1 .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        font-size: 0;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-transition: 2s;
+        -o-transition: 2s;
+        transition: 2s;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden; }
+        #main .pre__footer .wrap1 .front span, #main .pre__footer .wrap1 .back span {
+          color: black;
+          font-size: 40px;
+          text-align: center;
+          text-transform: lowercase; }
+      #main .pre__footer .wrap1 .front {
+        background-color: #b4c92f;
+        border-radius: 15px; }
+      #main .pre__footer .wrap1 .back {
+        background-color: #820520;
+        border-radius: 15px;
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg); }
